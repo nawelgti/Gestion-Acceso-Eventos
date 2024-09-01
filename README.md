@@ -13,5 +13,5 @@ Gestión de acceso a eventos. Ayudantia POO
 8. ***permitirEntrada():*** Valida si una persona cumple con todos los requisitos para entrar al evento buscando por su posición en la lista (de 0 a 9)
 9. ***removerPersona():*** Marca a una persona como NO ingresada dentro del evento buscando por su nombre.
 
-##Archivo con pruebas unitarias:
+## Archivo con pruebas unitarias:
 Incluye test para cada uno de los metodos + un test de varios metodos en simultaneo
