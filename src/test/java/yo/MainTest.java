@@ -47,4 +47,41 @@ public class MainTest {
         resultado = Main.verificarBoleto(lista, "Berni");
         assertEquals("False", resultado);
     }
+
+    @Test
+    void testValidarInvitiados() {
+        String resultado = Main.validarInvitados(lista, "Nawel");
+        assertEquals("Excede máximo", resultado);
+
+        resultado = Main.validarInvitados(lista, "Joaquin");
+        assertEquals("Permitido", resultado);
+
+        resultado = Main.validarInvitados(lista, "Berni");
+        assertEquals("No es VIP", resultado);
+    }
+
+    @Test
+    void testAforoDisponible() {
+        int aforo = Main.aforoDisponible(lista, 20);
+        assertEquals(18, aforo);
+
+        aforo = Main.aforoDisponible(lista, 10);
+        assertEquals(9, aforo);
+
+    }
+
+    @Test
+    void testIngresarPersona() {
+        lista = Main.ingresarPersona(lista, "Nawel");
+        assertEquals("True", lista[0][4]);
+    }
+
+    @Test
+    void testPermitirEntrada() {
+        boolean permiso = Main.permitirEntrada(lista, 0);
+        assertEquals(false, permiso);
+
+        permiso = Main.permitirEntrada(lista, 1);
+        assertEquals(true, permiso);
+    }
 }
