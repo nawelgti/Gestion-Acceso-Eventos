@@ -87,7 +87,14 @@ public class Main {
         }
         else if (aforoDisponible == 10) {
             for (int i=0; i<10; i++) {
-                if (lista[i][2] == "VIP" && lista[i][4] == "True") aforoDisponible--;
+                if (lista[i][2] == "VIP" && lista[i][4] == "True") {
+                    aforoDisponible--;
+                    
+                    String validarInvitados = validarInvitados(lista, lista[i][0]); 
+                    if (validarInvitados == "Permitido") {
+                        aforoDisponible = aforoDisponible - Integer.parseInt(lista[i][3]);
+                    }
+                }
             }
         }
         return aforoDisponible;

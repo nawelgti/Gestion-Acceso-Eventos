@@ -66,7 +66,7 @@ public class MainTest {
         assertEquals(18, aforo);
 
         aforo = Main.aforoDisponible(lista, 10);
-        assertEquals(9, aforo);
+        assertEquals(7, aforo);
 
     }
 
