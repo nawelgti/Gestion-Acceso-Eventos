@@ -10,5 +10,8 @@ Gestión de acceso a eventos. Ayudantia POO
 5. ***validarInvitados():*** Verifica si una persona cumple con los requisitos para traer invitados buscando por su nombre.
 6. ***aforoDisponible():*** Con "aforo = 20" devuelve el aforo disponible en GENERAL, con "aforo = 10" devuelve el aforo disponible en VIP.
 7. ***ingresarPersona():*** Marca a una persona como ingresada dentro del evento buscando por su nombre.
-8. ***permitirEntrada():*** Valida si una persona cumple con todos los requisitos para entrar al evento buscando por su número en la fila (de 0 a 9)
+8. ***permitirEntrada():*** Valida si una persona cumple con todos los requisitos para entrar al evento buscando por su posición en la lista (de 0 a 9)
 9. ***removerPersona():*** Marca a una persona como NO ingresada dentro del evento buscando por su nombre.
+
+##Archivo con pruebas unitarias:
+Incluye test para cada uno de los metodos + un test de varios metodos en simultaneo
