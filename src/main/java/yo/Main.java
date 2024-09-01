@@ -62,7 +62,11 @@ public class Main {
         return boleto;
     }
 
-    public static String validarInvitados(String) {
-        
+    public static String validarInvitados(String[][] lista, String nombre) {
+        for (int i=0; i<10; i++) {
+            if (lista[i][0].equals(nombre)) {
+                lista[i][]
+            }
+        }
     }
 }
