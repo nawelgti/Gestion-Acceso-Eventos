@@ -65,8 +65,16 @@ public class Main {
     public static String validarInvitados(String[][] lista, String nombre) {
         for (int i=0; i<10; i++) {
             if (lista[i][0].equals(nombre)) {
-                lista[i][]
+                if (lista[i][2].equals("VIP")) {
+                    int invitados = Integer.parseInt(lista[i][3]);
+                    if (invitados > 2) {
+                        return "Excede máximo";
+                    }
+                    else return "Permitido";
+                } 
+                else return "No es VIP";
             }
         }
+        return "error";
     }
 }
