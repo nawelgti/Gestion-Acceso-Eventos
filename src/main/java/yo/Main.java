@@ -23,8 +23,13 @@ public class Main {
         agregarPersona(lista, "Nawel", "20", "VIP", "5", "False");
         agregarPersona(lista, "Joaquin", "21", "VIP", "2", "True");
         agregarPersona(lista, "Berni", "10", "False", "0", "False");
-        agregarPersona(lista, "Matias", "26", "General", "5", "True");
-        agregarPersona(lista, "Hola", "18", "General", "2", "True");
+        agregarPersona(lista, "Matias", "26", "General", "0", "True");
+        agregarPersona(lista, "Paz", "30", "General", "2", "False");
+        agregarPersona(lista, "Pablo", "26", "VIP", "1", "True");
+        agregarPersona(lista, "Emilio", "17", "False", "1", "False");
+        agregarPersona(lista, "Gilberto", "25", "General", "0", "True");
+        agregarPersona(lista, "Antonia", "36", "General", "0", "False");
+        agregarPersona(lista, "Sofi", "52", "VIP", "2", "False");
         return lista;
     }
 
@@ -138,7 +143,7 @@ public class Main {
     public static String[][] removerPersona(String[][] lista, String nombre) { 
         for (int i=0; i<10; i++) {
             if (lista[i][0] != null && lista[i][0].equals(nombre)) {
-                
+                lista[i][4] = "False";
             }
         }
         return lista;

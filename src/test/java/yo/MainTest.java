@@ -62,11 +62,11 @@ public class MainTest {
 
     @Test
     void testAforoDisponible() {
-        int aforo = Main.aforoDisponible(lista, 20);
+        int aforo = Main.aforoDisponible(lista, 20); //general
         assertEquals(18, aforo);
 
-        aforo = Main.aforoDisponible(lista, 10);
-        assertEquals(7, aforo);
+        aforo = Main.aforoDisponible(lista, 10); //vip
+        assertEquals(5, aforo);
 
     }
 
@@ -83,5 +83,34 @@ public class MainTest {
 
         permiso = Main.permitirEntrada(lista, 1);
         assertEquals(true, permiso);
+    }
+
+    @Test
+    void testRemoverPersona() {
+        Main.removerPersona(lista, "Joaquin");
+        assertEquals("False", lista[1][4]);
+    }
+
+    @Test
+    void testAFOROS() {
+        //Comprobar aforo inicial
+        assertEquals(18, Main.aforoDisponible(lista, 20)); //General
+        assertEquals(5, Main.aforoDisponible(lista, 10)); //VIP
+
+        //Ingreso 1 General y 1 VIP + 2 invitados
+        Main.ingresarPersona(lista, "Antonia"); //general
+        assertEquals("True", lista[8][4]);
+        Main.ingresarPersona(lista, "Sofi"); //vip+2
+        assertEquals("True", lista[9][4]); 
+
+        //Comprobamos nuevo aforo
+        assertEquals(17, Main.aforoDisponible(lista, 20)); //General
+        assertEquals(2, Main.aforoDisponible(lista, 10)); //VIP
+
+        //Salida 1 VIP + invitado
+        Main.removerPersona(lista,"Pablo");
+
+        //Aforo
+        assertEquals(4, Main.aforoDisponible(lista, 10));
     }
 }
